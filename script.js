@@ -1,25 +1,24 @@
 
+document.getElementById('yorumForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const ad = document.getElementById('ad').value;
+    const yorum = document.getElementById('yorum').value;
+    const puan = document.getElementById('puan').value;
+    const yorumListesi = document.getElementById('yorumListesi');
+
+    const yorumHTML = `<p><strong>${ad}</strong> (${'⭐'.repeat(puan)}): ${yorum}</p>`;
+    yorumListesi.innerHTML += yorumHTML;
+
+    document.getElementById('yorumForm').reset();
+});
+
 document.getElementById('randevuForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const isim = document.getElementById('isim').value;
     const telefon = document.getElementById('telefon').value;
-    const hizmet = document.getElementById('hizmet').value;
-    const mesaj = `Merhaba, ben ${isim}. ${hizmet} hizmeti için randevu almak istiyorum. Numaram: ${telefon}`;
-    const wpLink = `https://wa.me/905456804926?text=${encodeURIComponent(mesaj)}`;
-    window.open(wpLink, '_blank');
-});
+    const tarih = document.getElementById('tarih').value;
 
-function yorumEkle() {
-    const ad = document.getElementById('yorumAd').value;
-    const yorum = document.getElementById('yorumMetin').value;
-    const yildiz = document.getElementById('yorumYildiz').value;
-    if (ad && yorum) {
-        const yorumListesi = document.getElementById('reviewList');
-        const yeniYorum = document.createElement('div');
-        yeniYorum.className = 'review';
-        yeniYorum.textContent = `${yildiz} ${ad}: ${yorum}`;
-        yorumListesi.appendChild(yeniYorum);
-        document.getElementById('yorumAd').value = '';
-        document.getElementById('yorumMetin').value = '';
-    }
-}
+    const mesaj = `Merhaba, ben ${isim}. ${tarih} tarihinde saç randevusu almak istiyorum. Telefon: ${telefon}`;
+    const whatsappURL = `https://wa.me/905456804926?text=${encodeURIComponent(mesaj)}`;
+    window.open(whatsappURL, '_blank');
+});

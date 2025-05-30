@@ -4,68 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Furkan Bülbül | Saç Renklendirme Uzmanı</title>
+    <title>Furkan Bülbül | Kuaför</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <img src="furkan_profil.jpg" alt="Furkan Bülbül Profil Fotoğrafı" class="profile-img">
-        <div class="intro-text">
-            <h1>Furkan Bülbül</h1>
-            <p>Profesyonel Saç Renklendirme & Boya Bakım Uzmanı</p>
-            <a href="https://www.instagram.com/coiffeur_furkanbullbull/" target="_blank" class="insta-button">Instagram Sayfam</a>
-        </div>
+        <h1>Furkan Bülbül</h1>
+        <p>Saç Renklendirme ve Boya Bakım Uzmanı</p>
+        <a href="https://instagram.com/coiffeur_furkanbullbull" target="_blank">Instagram'ı Görüntüle</a>
     </header>
 
-    <section class="about">
+    <section class="hakkimda">
         <h2>Hakkımda</h2>
-        <p>2001 Mersin doğumluyum. 14 yaşında mahalle arasında küçük bir kuaför dükkanında mesleğe ilk adımımı attım. O günden bu yana tutku ve azimle çalışarak, saç renklendirme ve boya bakımı alanında uzmanlaştım. Schwarzkopf, Wella, Hush, Aveda ve Olaplex gibi dünya markalarının eğitimlerini tamamlayarak bilgi ve becerilerimi en üst seviyeye taşıdım. Müşterilerime en iyi hizmeti sunmak için gelişmeye devam ediyorum.</p>
+        <p>Merhaba, ben Furkan Bülbül. 2001 Mersin doğumluyum. 14 yaşımda mahallemizdeki küçük bir kuaförde başladığım bu yolculuk, bugün saç renklendirme ve boya bakımında uzmanlaştığım bir mesleğe dönüştü.</p>
+        <p>Yıllar içinde Schwarzkopf, Wella, Hush, Aveda ve Olaplex gibi dünyaca ünlü markalardan profesyonel eğitimler alarak hem teknik becerilerimi geliştirdim, hem de müşteri memnuniyetini ön planda tutan bir hizmet anlayışı benimsedim.</p>
+        <p>Renk geçişleri, doğru ton seçimi ve saç sağlığını koruyan uygulamalar konusunda titiz ve özenli çalışırım. Müşterilerimin aynaya gülümsediği an, benim için başarının tanımıdır.</p>
+        <p>Detaylı bilgi ve randevu için Instagram hesabımdan ya da WhatsApp üzerinden iletişime geçebilirsiniz.</p>
+        <p>İletişim: 0545 680 4926</p>
     </section>
 
-    <section class="gallery">
-        <h2>Moda & Saç İlhamı</h2>
-        <div class="image-row">
-            <img src="model1.jpg" alt="Model 1">
-            <img src="model2.jpg" alt="Model 2">
-            <img src="model3.jpg" alt="Model 3">
+    <section class="modeller">
+        <h2>Saç Modelleri</h2>
+        <div class="model-galeri">
+            <img src="model1.jpg" alt="Model 1" class="model-img">
+            <img src="model2.jpg" alt="Model 2" class="model-img">
+            <img src="model3.jpg" alt="Model 3" class="model-img">
         </div>
     </section>
 
-    <section class="reviews">
+    <section class="yorumlar">
         <h2>Müşteri Yorumları</h2>
-        <div id="reviewList">
-            <div class="review">🌟🌟🌟🌟🌟 Elif: Saçlarım tam istediğim gibi oldu, harikasın!</div>
-            <div class="review">🌟🌟🌟🌟🌟 Zeynep: Renk geçişi mükemmel, teşekkür ederim Furkan!</div>
-        </div>
-
-        <div class="review-form">
-            <h3>Yorum Bırak</h3>
-            <input type="text" id="yorumAd" placeholder="Adınız">
-            <textarea id="yorumMetin" placeholder="Yorumunuz..."></textarea>
-            <select id="yorumYildiz">
-                <option value="⭐">⭐</option>
-                <option value="⭐⭐">⭐⭐</option>
-                <option value="⭐⭐⭐">⭐⭐⭐</option>
-                <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
-                <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
+        <div id="yorumListesi"></div>
+        <form id="yorumForm">
+            <input type="text" id="ad" placeholder="Adınız" required>
+            <textarea id="yorum" placeholder="Yorumunuz" required></textarea>
+            <label for="puan">Puan:</label>
+            <select id="puan" required>
+                <option value="5">⭐⭐⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="1">⭐</option>
             </select>
-            <button onclick="yorumEkle()">Gönder</button>
-        </div>
+            <button type="submit">Yorum Yap</button>
+        </form>
     </section>
 
-    <section class="appointment">
-        <h2>Randevu Al</h2>
+    <section class="randevu">
+        <h2>Randevu Oluştur</h2>
         <form id="randevuForm">
             <input type="text" id="isim" placeholder="Adınız Soyadınız" required>
             <input type="tel" id="telefon" placeholder="Telefon Numaranız" required>
-            <input type="text" id="hizmet" placeholder="Almak istediğiniz hizmet" required>
-            <button type="submit">Randevu Oluştur</button>
+            <input type="datetime-local" id="tarih" required>
+            <button type="submit">WhatsApp'tan Gönder</button>
         </form>
     </section>
 
     <footer>
-        <p>İletişim: 0545 680 4926 • Instagram: @coiffeur_furkanbullbull</p>
+        <p>&copy; 2025 Furkan Bülbül</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

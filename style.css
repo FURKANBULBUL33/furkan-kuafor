@@ -1,125 +1,45 @@
 
 body {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #fdfdfd;
-    color: #222;
+    background: #fefefe;
+    color: #333;
 }
-
 header {
-    display: flex;
-    align-items: center;
-    background: #f4f4f4;
+    text-align: center;
     padding: 20px;
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: center;
-}
-
-.profile-img {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    margin: 15px;
-    object-fit: cover;
-    border: 3px solid #e91e63;
-}
-
-.intro-text {
-    max-width: 500px;
-    margin: 15px;
-}
-
-.insta-button {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background: #e91e63;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-section {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.review {
-    background: #fff;
-    padding: 15px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    text-align: left;
-}
-
-.review-form {
-    margin-top: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    gap: 10px;
-}
-
-.review-form input,
-.review-form textarea,
-.review-form select {
-    padding: 10px;
-    font-size: 16px;
-    width: 100%;
-}
-
-.review-form button {
-    background-color: #e91e63;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-form {
-    max-width: 400px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-form input, form button {
-    padding: 12px;
-    font-size: 16px;
-}
-
-form button {
-    background-color: #e91e63;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-footer {
     background: #222;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+    color: white;
 }
-
-.image-row {
+.profile-img {
+    width: 120px;
+    border-radius: 50%;
+}
+section {
+    padding: 20px;
+}
+.model-galeri {
     display: flex;
     gap: 10px;
-    justify-content: center;
     flex-wrap: wrap;
 }
-
-.image-row img {
+.model-img {
     width: 100%;
     max-width: 200px;
     border-radius: 10px;
-    object-fit: cover;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+textarea {
+    resize: vertical;
+}
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
 }
