@@ -1,0 +1,98 @@
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fdfdfd;
+    color: #222;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background: #f4f4f4;
+    padding: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin: 15px;
+    object-fit: cover;
+    border: 3px solid #e91e63;
+}
+
+.intro-text {
+    max-width: 500px;
+    margin: 15px;
+}
+
+.insta-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #e91e63;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.review-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    padding: 20px 0;
+}
+
+.review {
+    flex: 0 0 auto;
+    min-width: 250px;
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    scroll-snap-align: center;
+}
+
+iframe {
+    max-width: 90%;
+    height: 400px;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input, form button {
+    padding: 12px;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+footer {
+    background: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
