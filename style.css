@@ -46,27 +46,40 @@ section {
     text-align: center;
 }
 
-.review-slider {
-    display: flex;
-    overflow-x: auto;
-    gap: 20px;
-    scroll-snap-type: x mandatory;
-    padding: 20px 0;
-}
-
 .review {
-    flex: 0 0 auto;
-    min-width: 250px;
     background: #fff;
     padding: 15px;
+    margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 10px;
-    scroll-snap-align: center;
+    text-align: left;
 }
 
-iframe {
-    max-width: 90%;
-    height: 400px;
+.review-form {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 10px;
+}
+
+.review-form input,
+.review-form textarea,
+.review-form select {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.review-form button {
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
 }
 
 form {
@@ -95,4 +108,18 @@ footer {
     color: #fff;
     padding: 20px;
     text-align: center;
+}
+
+.image-row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.image-row img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    object-fit: cover;
 }

@@ -23,26 +23,34 @@
         <p>2001 Mersin doğumluyum. 14 yaşında mahalle arasında küçük bir kuaför dükkanında mesleğe ilk adımımı attım. O günden bu yana tutku ve azimle çalışarak, saç renklendirme ve boya bakımı alanında uzmanlaştım. Schwarzkopf, Wella, Hush, Aveda ve Olaplex gibi dünya markalarının eğitimlerini tamamlayarak bilgi ve becerilerimi en üst seviyeye taşıdım. Müşterilerime en iyi hizmeti sunmak için gelişmeye devam ediyorum.</p>
     </section>
 
-    <section class="video">
-        <h2>Instagram Videom</h2>
-        <iframe src="https://www.instagram.com/reel/C0I3cD1tRXY/embed" frameborder="0" allowfullscreen></iframe>
+    <section class="gallery">
+        <h2>Moda & Saç İlhamı</h2>
+        <div class="image-row">
+            <img src="model1.jpg" alt="Model 1">
+            <img src="model2.jpg" alt="Model 2">
+            <img src="model3.jpg" alt="Model 3">
+        </div>
     </section>
 
     <section class="reviews">
         <h2>Müşteri Yorumları</h2>
-        <div class="review-slider">
+        <div id="reviewList">
             <div class="review">🌟🌟🌟🌟🌟 Elif: Saçlarım tam istediğim gibi oldu, harikasın!</div>
             <div class="review">🌟🌟🌟🌟🌟 Zeynep: Renk geçişi mükemmel, teşekkür ederim Furkan!</div>
-            <div class="review">🌟🌟🌟🌟🌟 Duygu: Boya sonrası bakım sayesinde saçlarım yumuşacık oldu.</div>
-            <div class="review">🌟🌟🌟🌟🌟 Buse: Gözüm kapalı güveniyorum, her defasında şahane.</div>
-            <div class="review">🌟🌟🌟🌟🌟 Merve: Profesyonellik ve ilgi muazzam.</div>
-            <div class="review">🌟🌟🌟🌟🌟 Ayşe: Tam zamanında ve titizlikle yapılıyor her şey.</div>
-            <div class="review">🌟🌟🌟🌟🌟 Sibel: Çok memnun kaldım, tekrar geleceğim.</div>
-            <div class="review">🌟🌟🌟🌟🌟 Gamze: Saç tonum ilk kez bu kadar güzel oldu!</div>
-            <div class="review">🌟🌟🌟🌟🌟 Ece: Ellerine sağlık, ışıl ışıl saçlarım var artık.</div>
-            <div class="review">🌟🌟🌟🌟🌟 Esra: Bütün kuaför deneyimlerimin en iyisi!</div>
-            <div class="review">🌟🌟🌟🌟🌟 Kübra: Hem güler yüz hem profesyonellik burada.</div>
-            <div class="review">🌟🌟🌟🌟🌟 Dilan: Bayıldım! Herkese tavsiye ederim.</div>
+        </div>
+
+        <div class="review-form">
+            <h3>Yorum Bırak</h3>
+            <input type="text" id="yorumAd" placeholder="Adınız">
+            <textarea id="yorumMetin" placeholder="Yorumunuz..."></textarea>
+            <select id="yorumYildiz">
+                <option value="⭐">⭐</option>
+                <option value="⭐⭐">⭐⭐</option>
+                <option value="⭐⭐⭐">⭐⭐⭐</option>
+                <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+                <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
+            </select>
+            <button onclick="yorumEkle()">Gönder</button>
         </div>
     </section>
 
