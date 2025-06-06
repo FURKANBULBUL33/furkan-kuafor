@@ -5,66 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Furkan Bülbül | Kuaför</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fff; color: #333; }
+        header { text-align: center; padding: 30px 20px; background-color: #f4f4f4; }
+        header img { max-width: 180px; border-radius: 100px; box-shadow: 0 0 10px rgba(0,0,0,0.2); }
+        h1 { margin: 20px 0 10px; }
+        p.bio { font-size: 16px; max-width: 700px; margin: auto; }
+        section { padding: 20px; max-width: 900px; margin: auto; }
+        .yorumlar { margin-top: 40px; background: #f9f9f9; padding: 20px; border-radius: 10px; }
+        .yorum-karti { margin-bottom: 15px; border-bottom: 1px solid #ccc; padding-bottom: 10px; }
+        form input, form textarea, form select, form button {
+            display: block; width: 100%; padding: 10px; margin-top: 10px; font-size: 16px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <img src="furkan_profil.jpg" alt="Furkan Bülbül Profil Fotoğrafı" class="profile-img">
-        <h1>Furkan Bülbül</h1>
-        <p>Saç Renklendirme ve Boya Bakım Uzmanı</p>
-        <a href="https://instagram.com/coiffeur_furkanbullbull" target="_blank">Instagram'ı Görüntüle</a>
-    </header>
 
-    <section class="hakkimda">
-        <h2>Hakkımda</h2>
-        <p>Merhaba, ben Furkan Bülbül. 2001 Mersin doğumluyum. 14 yaşımda mahallemizdeki küçük bir kuaförde başladığım bu yolculuk, bugün saç renklendirme ve boya bakımında uzmanlaştığım bir mesleğe dönüştü.</p>
-        <p>Yıllar içinde Schwarzkopf, Wella, Hush, Aveda ve Olaplex gibi dünyaca ünlü markalardan profesyonel eğitimler alarak hem teknik becerilerimi geliştirdim, hem de müşteri memnuniyetini ön planda tutan bir hizmet anlayışı benimsedim.</p>
-        <p>Renk geçişleri, doğru ton seçimi ve saç sağlığını koruyan uygulamalar konusunda titiz ve özenli çalışırım. Müşterilerimin aynaya gülümsediği an, benim için başarının tanımıdır.</p>
-        <p>Detaylı bilgi ve randevu için Instagram hesabımdan ya da WhatsApp üzerinden iletişime geçebilirsiniz.</p>
-        <p>İletişim: 0545 680 4926</p>
-    </section>
+<header>
+    <img src="furkan_profil.jpg" alt="Furkan Bülbül Profil Fotoğrafı">
+    <h1>Furkan Bülbül</h1>
+    <p class="bio">
+        Merhaba, ben Furkan Bülbül. 2001 Mersin doğumluyum. 14 yaşımda mahallemizdeki küçük bir kuaförde başladığım bu yolculuk,
+        bugün saç renklendirme ve boya bakımında uzmanlaştığım bir mesleğe dönüştü. Yıllar içinde Schwarzkopf, Wella, Hush, Aveda
+        ve Olaplex gibi dünyaca ünlü markalardan profesyonel eğitimler aldım. Renk geçişleri, doğru ton seçimi ve saç sağlığını koruyan
+        uygulamalarla çalışırım. Müşterilerimin aynaya gülümsediği an, benim için başarının tanımıdır.
+    </p>
+</header>
 
-    <section class="modeller">
-        <h2>Saç Modelleri</h2>
-        <div class="model-galeri">
-            <img src="model1.jpg" alt="Model 1" class="model-img">
-            <img src="model2.jpg" alt="Model 2" class="model-img">
-            <img src="model3.jpg" alt="Model 3" class="model-img">
-        </div>
-    </section>
+<section class="yorumlar">
+    <h2>Müşteri Yorumları</h2>
+    <div id="yorumListesi"></div>
+    <form id="yorumForm">
+        <input type="text" id="ad" placeholder="Adınız" required>
+        <textarea id="yorum" placeholder="Yorumunuz" required></textarea>
+        <select id="puan" required>
+            <option value="">Puan verin</option>
+            <option value="1">⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="5">⭐⭐⭐⭐⭐</option>
+        </select>
+        <button type="submit">Yorumu Gönder</button>
+    </form>
+</section>
 
-    <section class="yorumlar">
-        <h2>Müşteri Yorumları</h2>
-        <div id="yorumListesi"></div>
-        <form id="yorumForm">
-            <input type="text" id="ad" placeholder="Adınız" required>
-            <textarea id="yorum" placeholder="Yorumunuz" required></textarea>
-            <label for="puan">Puan:</label>
-            <select id="puan" required>
-                <option value="5">⭐⭐⭐⭐⭐</option>
-                <option value="4">⭐⭐⭐⭐</option>
-                <option value="3">⭐⭐⭐</option>
-                <option value="2">⭐⭐</option>
-                <option value="1">⭐</option>
-            </select>
-            <button type="submit">Yorum Yap</button>
-        </form>
-    </section>
+<script src="script.js"></script>
 
-    <section class="randevu">
-        <h2>Randevu Oluştur</h2>
-        <form id="randevuForm">
-            <input type="text" id="isim" placeholder="Adınız Soyadınız" required>
-            <input type="tel" id="telefon" placeholder="Telefon Numaranız" required>
-            <input type="datetime-local" id="tarih" required>
-            <button type="submit">WhatsApp'tan Gönder</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Furkan Bülbül</p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
